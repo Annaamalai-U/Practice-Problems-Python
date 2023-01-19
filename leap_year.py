@@ -1,8 +1,10 @@
-y=int(input("Enter an Year to check leap year or not"))
-if(len(str(y))==4 and str(y)[0]!=0):
-    if((y%400==0 or y%100!=0) and (y%4==0)):
-        print("Leap Year")
+def leap_year(year):
+    if(year%4!=0):
+        print("False");
     else:
-        print("Non Leap Year")
-else:
-    print("Year should be of 4 values")
+        if(year%100==0 and year%400!=0):
+            print("False")
+        else:
+            print("True")
+n=int(input(""))
+leap_year(n)
